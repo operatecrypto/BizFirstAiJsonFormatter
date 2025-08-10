@@ -1,3 +1,25 @@
+# Web Site is available at
+
+https://www.bizfirstai.com/website/JsonFormatter/index.html
+https://www.bizfirstai.com/website/JsonFormatter/help.html
+
+
+# License to use
+
+Free License is granted to every builder in Accumulate blockchain ecosystem
+Free License is granted to every client of BizFirstAI
+
+# Resale License
+Free License of the JsonFormatter is given to the following companies with resale and commercial distribution rights
+## #PenguinAIPlatform.com
+## #Certen.io
+## #MicroPayTechnologies.com
+## #OperateCrypto.com
+## #GenialtAI.com
+## #OperateAI.com
+## #OperateID.com
+
+
 # BizFirstAiJsonFormatter
 
 A JSON formatter tool that can be integrated into an AI chat window
