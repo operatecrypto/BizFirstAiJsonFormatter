@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter - Help Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .help-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .help-content h2 {
+            color: #00ff88;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #00ff88;
+            padding-bottom: 5px;
+        }
+        .help-content h3 {
+            color: #00cc6a;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .code-block {
+            background: #1a1a1a;
+            border: 1px solid #4a4a4a;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .highlight {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .feature-list {
+            background: #2a2a2a;
+            border-left: 4px solid #00ff88;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning {
+            background: #2d1b1b;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 15px 0;
+            color: #ff6b6b;
+        }
+        .info {
+            background: #1b1f2d;
+            border-left: 4px solid #0080ff;
+            padding: 15px;
+            margin: 15px 0;
+            color: #0080ff;
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to JSON Formatter</a>
+        
+        <header>
+            <div class="logo-section">
+                <img src="https://www.bizfirstai.com/website/images/logo.png" alt="BizFirstAI Logo" class="logo">
+                <div class="brand-text">
+                    <h1>JSON Formatter - Help Documentation</h1>
+                    <p>Complete guide to using the JSON Formatter and integration options</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="help-content">
+                
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#overview">Project Overview</a></li>
+                    <li><a href="#basic-usage">Basic Usage</a></li>
+                    <li><a href="#url-integration">URL Parameter Integration</a></li>
+                    <li><a href="#embedding">Embedding in Your Website</a></li>
+                    <li><a href="#ai-integration">AI Integration Features</a></li>
+                    <li><a href="#blockchain-validation">Blockchain Transaction Validation</a></li>
+                    <li><a href="#security">Privacy & Security</a></li>
+                    <li><a href="#examples">Integration Examples</a></li>
+                    <li><a href="#api">Developer API</a></li>
+                </ul>
+
+                <h2 id="overview">Project Overview</h2>
+                
+                <p>The BizFirstAI JSON Formatter is a powerful, privacy-focused tool designed for developers and users who need to format, validate, and analyze JSON data. Our tool serves two primary purposes:</p>
+                
+                <div class="feature-list">
+                    <h3>Primary Use Cases:</h3>
+                    <ol>
+                        <li><strong>Manual JSON Processing:</strong> Developers and users can input JSON data directly to format, validate, and analyze it using our intuitive interface.</li>
+                        <li><strong>Application Integration:</strong> Any application can integrate with our tool by creating URLs that automatically process JSON data, making it perfect for embedding in websites or linking from other applications.</li>
+                    </ol>
+                </div>
+
+                <h2 id="basic-usage">Basic Usage</h2>
+                
+                <h3>Available Actions</h3>
+                <ul>
+                    <li><strong>Format:</strong> Pretty-print JSON with proper indentation (default action)</li>
+                    <li><strong>Beautify:</strong> Same as format, provided for compatibility</li>
+                    <li><strong>Minify:</strong> Remove all unnecessary whitespace to compress JSON</li>
+                    <li><strong>Validate:</strong> Check JSON syntax and provide detailed error messages</li>
+                </ul>
+
+                <h3>Manual Usage</h3>
+                <ol>
+                    <li>Paste your JSON data into the input textarea</li>
+                    <li>Click the desired action button (Format, Minify, Validate, or Clear)</li>
+                    <li>View the results in the output section</li>
+                    <li>Copy the formatted result using the "Copy to Clipboard" button</li>
+                </ol>
+
+                <h2 id="url-integration">URL Parameter Integration</h2>
+                
+                <p>The JSON Formatter supports automatic processing via URL parameters, making it perfect for integration with other applications.</p>
+
+                <h3>URL Format</h3>
+                <div class="code-block">
+https://yoursite.com/index.html?inputJson=[URL_ENCODED_JSON]&actionType=[ACTION]
+                </div>
+
+                <h3>Parameters</h3>
+                <ul>
+                    <li><strong>inputJson:</strong> URL-encoded JSON string to process (required)</li>
+                    <li><strong>actionType:</strong> Action to perform (optional, defaults to "format")
+                        <ul>
+                            <li><span class="highlight">format</span> - Pretty-print with indentation (default)</li>
+                            <li><span class="highlight">beautify</span> - Same as format</li>
+                            <li><span class="highlight">minify</span> - Remove whitespace</li>
+                            <li><span class="highlight">validate</span> - Validate syntax only</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Example URLs</h3>
+                <div class="code-block">
+# Format JSON automatically
+index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=format
+
+# Minify JSON
+index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=minify
+
+# Validate JSON
+index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=validate
+                </div>
+
+                <h2 id="embedding">Embedding in Your Website</h2>
+                
+                <p>You can embed the JSON Formatter directly into your website or web application using an iframe:</p>
+
+                <div class="code-block">
+&lt;iframe 
+    src="https://yoursite.com/index.html?inputJson=YOUR_ENCODED_JSON&actionType=format"
+    width="100%" 
+    height="600"
+    frameborder="0"
+    style="border: 1px solid #ccc; border-radius: 8px;"&gt;
+&lt;/iframe&gt;
+                </div>
+
+                <div class="info">
+                    <strong>Pro Tip:</strong> When embedding, the JSON will be automatically processed and displayed when the iframe loads, providing a seamless user experience.
+                </div>
+
+                <h2 id="ai-integration">AI Integration Features</h2>
+                
+                <p>The JSON Formatter includes optional AI integration capabilities that can convert JSON data into natural language explanations based on your custom instructions.</p>
+
+                <h3>How AI Integration Works</h3>
+                <ol>
+                    <li><strong>Custom Instructions:</strong> You provide instructions on how the AI should interpret your JSON data</li>
+                    <li><strong>AI Processing:</strong> The JSON is sent to your configured AI service (e.g., Gemini AI, OpenAI, etc.)</li>
+                    <li><strong>Natural Language Output:</strong> Receive human-readable explanations of complex JSON structures</li>
+                </ol>
+
+                <div class="feature-list">
+                    <h3>AI Integration Benefits:</h3>
+                    <ul>
+                        <li>Convert complex JSON into readable explanations</li>
+                        <li>Custom interpretation based on your domain knowledge</li>
+                        <li>Multiple AI provider support</li>
+                        <li>Your own API keys and accounts for full control</li>
+                    </ul>
+                </div>
+
+                <h2 id="blockchain-validation">Blockchain Transaction Validation</h2>
+                
+                <p>One of the most powerful use cases is validating blockchain transactions before submission. This feature is designed for maximum security and trust verification.</p>
+
+                <h3>Use Case Example</h3>
+                <p>Imagine you're using a blockchain wallet and need to send a complex financial transaction. Before signing and submitting to the blockchain, you can:</p>
+
+                <ol>
+                    <li><strong>Extract Transaction Data:</strong> Your wallet generates JSON representing the transaction</li>
+                    <li><strong>Send to Validator:</strong> The JSON is sent to our formatter with custom validation instructions</li>
+                    <li><strong>AI Analysis:</strong> Your trusted AI provider analyzes the transaction against your criteria</li>
+                    <li><strong>Human-Readable Report:</strong> Get a clear explanation of what the transaction will do</li>
+                    <li><strong>Verify & Proceed:</strong> Make an informed decision before signing</li>
+                </ol>
+
+                <h3>Trust and Security Model</h3>
+                <div class="warning">
+                    <strong>Zero Trust Architecture:</strong> Your data is never sent to BizFirstAI servers or any third parties you don't explicitly choose. All processing happens through your own configured AI services.
+                </div>
+
+                <div class="feature-list">
+                    <h3>Security Features:</h3>
+                    <ul>
+                        <li>Your data only goes to AI services you configure</li>
+                        <li>Use your own API keys and accounts</li>
+                        <li>No dependency on BizFirstAI for data processing</li>
+                        <li>Client-side processing where possible</li>
+                        <li>Support for fully managed or self-hosted solutions</li>
+                    </ul>
+                </div>
+
+                <h2 id="security">Privacy & Security</h2>
+                
+                <h3>Data Privacy</h3>
+                <ul>
+                    <li><strong>Client-Side Processing:</strong> Basic JSON formatting and validation happens entirely in your browser</li>
+                    <li><strong>No Data Storage:</strong> We don't store any of your JSON data on our servers</li>
+                    <li><strong>Your AI Services:</strong> When using AI features, data is sent only to AI providers you configure</li>
+                    <li><strong>Open Source:</strong> The code is transparent and auditable</li>
+                </ul>
+
+                <h3>Integration Options</h3>
+                <ul>
+                    <li><strong>Bring Your Own Keys:</strong> Use your own API keys for AI services</li>
+                    <li><strong>Self-Hosted:</strong> Deploy the entire solution on your own infrastructure</li>
+                    <li><strong>Managed Service:</strong> Optional managed integration for enterprise users</li>
+                </ul>
+
+                <h2 id="examples">Integration Examples</h2>
+
+                <h3>JavaScript Integration</h3>
+                <div class="code-block">
+// Generate URL for JSON processing
+function formatJSONWithTool(jsonData, action = 'format') {
+    const encodedJSON = encodeURIComponent(JSON.stringify(jsonData));
+    const url = `https://yoursite.com/index.html?inputJson=${encodedJSON}&actionType=${action}`;
+    return url;
+}
+
+// Example usage
+const transactionData = {
+    to: "0x1234567890123456789012345678901234567890",
+    value: "1000000000000000000",
+    gas: "21000"
+};
+
+const validationURL = formatJSONWithTool(transactionData, 'validate');
+window.open(validationURL, '_blank');
+                </div>
+
+                <h3>Python Integration</h3>
+                <div class="code-block">
+import urllib.parse
+import json
+
+def create_json_formatter_url(json_data, action='format', base_url='https://yoursite.com'):
+    """Create URL for JSON formatter with data"""
+    encoded_json = urllib.parse.quote(json.dumps(json_data))
+    url = f"{base_url}/index.html?inputJson={encoded_json}&actionType={action}"
+    return url
+
+# Example usage
+transaction = {
+    "to": "0x1234567890123456789012345678901234567890",
+    "value": "1000000000000000000",
+    "gas": "21000"
+}
+
+validation_url = create_json_formatter_url(transaction, 'validate')
+print(f"Validation URL: {validation_url}")
+                </div>
+
+                <h2 id="api">Developer API</h2>
+                
+                <h3>URL Encoding Helper</h3>
+                <p>When integrating, ensure your JSON is properly URL-encoded:</p>
+                
+                <div class="code-block">
+// JavaScript
+const encodedJSON = encodeURIComponent(JSON.stringify(yourJSONObject));
+
+// Python
+import urllib.parse
+import json
+encoded_json = urllib.parse.quote(json.dumps(your_json_object))
+
+// PHP
+$encodedJSON = urlencode(json_encode($yourJSONObject));
+                </div>
+
+                <h3>Supported MIME Types</h3>
+                <ul>
+                    <li><span class="highlight">application/json</span> - Standard JSON content type</li>
+                    <li><span class="highlight">text/plain</span> - Plain text JSON</li>
+                    <li><span class="highlight">application/x-www-form-urlencoded</span> - Form-encoded JSON in URL parameters</li>
+                </ul>
+
+                <h3>Error Handling</h3>
+                <p>The formatter provides detailed error messages for:</p>
+                <ul>
+                    <li>Invalid JSON syntax</li>
+                    <li>Missing closing brackets or braces</li>
+                    <li>Unexpected tokens</li>
+                    <li>Position-specific error information</li>
+                </ul>
+
+                <div class="info">
+                    <strong>Need Help?</strong> If you need assistance with integration or have questions about AI features, contact our support team or check our GitHub repository for examples and community support.
+                </div>
+
+                <h2>Getting Started</h2>
+                
+                <ol>
+                    <li><strong>Basic Use:</strong> <a href="index.html">Try the formatter now</a></li>
+                    <li><strong>Test Integration:</strong> <a href="test.html">View test examples</a></li>
+                    <li><strong>Download:</strong> Clone from GitHub for self-hosting</li>
+                    <li><strong>Integrate:</strong> Use the URL parameter format in your application</li>
+                </ol>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>2024 JSON Formatter | Powered by <a href="https://www.bizfirstai.com" target="_blank" class="brand-link">BizFirstAI</a></p>
+        </footer>
+    </div>
+</body>
+</html>

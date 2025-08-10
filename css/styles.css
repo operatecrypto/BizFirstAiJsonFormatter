@@ -27,6 +27,33 @@ header {
     text-align: center;
     margin-bottom: 30px;
     color: white;
+    position: relative;
+}
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 15px;
+}
+
+.help-link {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 2px solid #00ff88;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.help-link:hover {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
 }
 
 .logo-section {
@@ -272,6 +299,17 @@ footer {
 
     .logo {
         max-height: 50px;
+    }
+
+    .header-nav {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .help-link {
+        font-size: 13px;
+        padding: 6px 12px;
     }
 
     main {
