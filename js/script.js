@@ -3,6 +3,7 @@ class JSONFormatter {
     constructor() {
         this.initializeElements();
         this.bindEvents();
+        this.processUrlParameters();
     }
 
     initializeElements() {
@@ -30,6 +31,48 @@ class JSONFormatter {
         this.jsonInput.addEventListener('input', () => this.debounce(this.validateJSON.bind(this), 500));
     }
 
+    // Process URL parameters for automatic JSON processing
+    processUrlParameters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const inputJson = urlParams.get('inputJson');
+        const actionType = urlParams.get('actionType') || 'format';
+        
+        if (inputJson) {
+            try {
+                // Decode the JSON input
+                const decodedJson = decodeURIComponent(inputJson);
+                this.jsonInput.value = decodedJson;
+                
+                // Automatically process based on actionType
+                this.performAction(actionType);
+                
+            } catch (error) {
+                this.showError('Invalid JSON provided in URL parameters.');
+            }
+        }
+    }
+
+    // Perform the specified action on the JSON
+    performAction(actionType) {
+        switch (actionType.toLowerCase()) {
+            case 'minify':
+                this.minifyJSON();
+                break;
+            case 'beautify':
+                this.beautifyJSON();
+                break;
+            case 'format':
+                this.formatJSON();
+                break;
+            case 'validate':
+                this.validateJSON();
+                break;
+            default:
+                this.formatJSON(); // Default action
+                break;
+        }
+    }
+
     // Format JSON with proper indentation
     formatJSON() {
         const inputText = this.jsonInput.value.trim();
@@ -51,6 +94,11 @@ class JSONFormatter {
         } catch (error) {
             this.handleJSONError(error, 'formatting');
         }
+    }
+
+    // Beautify JSON (alias for formatJSON for backwards compatibility)
+    beautifyJSON() {
+        this.formatJSON();
     }
 
     // Minify JSON by removing whitespace

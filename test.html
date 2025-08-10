@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter Test</title>
+</head>
+<body>
+    <h1>Test URLs for JSON Formatter</h1>
+    <p>Click the links below to test different scenarios:</p>
+    
+    <h2>Test Cases:</h2>
+    <ul>
+        <li><a href="index.html">1. Normal operation (no parameters)</a></li>
+        <li><a href="index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=format">2. Format JSON from URL</a></li>
+        <li><a href="index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=minify">3. Minify JSON from URL</a></li>
+        <li><a href="index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=beautify">4. Beautify JSON from URL</a></li>
+        <li><a href="index.html?inputJson=%7B%22name%22%3A%22John%22%2C%22age%22%3A30%7D&actionType=validate">5. Validate JSON from URL</a></li>
+        <li><a href="index.html?inputJson=%7B%22invalid%22%3Ajson%7D&actionType=format">6. Invalid JSON test</a></li>
+    </ul>
+    
+    <h2>URL Format:</h2>
+    <p><code>index.html?inputJson=[URL_ENCODED_JSON]&actionType=[minify|beautify|format|validate]</code></p>
+    
+    <h2>Sample JSON for testing:</h2>
+    <pre>{"name":"John","age":30,"city":"New York","hobbies":["reading","coding"]}</pre>
+    <p>URL encoded: <code>%7B%22name%22%3A%22John%22%2C%22age%22%3A30%2C%22city%22%3A%22New%20York%22%2C%22hobbies%22%3A%5B%22reading%22%2C%22coding%22%5D%7D</code></p>
+</body>
+</html>
