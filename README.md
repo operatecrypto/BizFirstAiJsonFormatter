@@ -1,3 +1,4 @@
 # BizFirstAiJsonFormatter
 
-A JSon formatter tool that can be integrated into an AI chat window
+A JSON formatter tool that can be integrated into an AI chat window
+
