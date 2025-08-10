@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-nav">
+                <a href="help.html" class="help-link">Help & Documentation</a>
+            </div>
+            <div class="logo-section">
+                <img src="https://www.bizfirstai.com/website/images/logo.png" alt="BizFirstAI Logo" class="logo">
+                <div class="brand-text">
+                    <h1>JSON Formatter</h1>
+                    <p>Format, minify, and validate your JSON data</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Input JSON</h2>
+                <textarea id="jsonInput" placeholder="Paste your JSON here..."></textarea>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+
+            <div class="controls">
+                <button id="formatBtn" class="btn btn-primary">Format JSON</button>
+                <button id="minifyBtn" class="btn btn-secondary">Minify JSON</button>
+                <button id="validateBtn" class="btn btn-info">Validate JSON</button>
+                <button id="clearBtn" class="btn btn-warning">Clear</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Formatted Output</h2>
+                    <button id="copyBtn" class="btn btn-copy">Copy to Clipboard</button>
+                </div>
+                <textarea id="jsonOutput" readonly></textarea>
+                <div class="success-message" id="successMessage"></div>
+            </div>
+
+            <div class="validation-info">
+                <div id="validationStatus" class="status-indicator"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>2024 JSON Formatter | Powered by <a href="https://www.bizfirstai.com" target="_blank" class="brand-link">BizFirstAI</a></p>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
